@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+git config --global --add safe.directory '*'
 sig=`cat /github.sig`
 challenge=`ssh-keyscan -t rsa github.com 2>/dev/null | ssh-keygen -lf -`
 
